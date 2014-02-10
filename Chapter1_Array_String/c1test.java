@@ -27,11 +27,11 @@ public class c1test
 		String str2 = "eabc";
 		String str = "";
 		Problem5 p5 = new Problem5();
-		String str5 = p5.simpleCompress("aabbbbcs");
-
+		String res = p5.simpleCompress("aabddccddeeeeeeeea");
+		// String res = p5.compress();
 
 		// str = str.substring;
-		System.out.println(str5);
+		System.out.println(res);
 
 	}
 }

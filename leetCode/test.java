@@ -24,14 +24,15 @@ public class test
 {
 	public static void main(String[] args)
 	{
+		
 		// int[] t1 = new int[20]; 
-		int[] t1 = {1,3,5,7,9,0,0,0,0,0};
-		int[] t2 = {2,4,6,8,10}; 
-		MergeSArray.merge(t1, 5, t2, 5);
-		for (int i=0; i<t1.length; i++)
-		{
-			System.out.println(t1[i]);
-		}
+		// int[] t1 = {1,3,5,7,9,0,0,0,0,0};
+		// int[] t2 = {2,4,6,8,10}; 
+		// MergeSArray.merge(t1, 5, t2, 5);
+		// for (int i=0; i<t1.length; i++)
+		// {
+		// 	System.out.println(t1[i]);
+		// }
 
 		// t2 = {2,4,6,8,10,11};
 

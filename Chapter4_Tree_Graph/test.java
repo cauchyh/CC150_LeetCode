@@ -29,8 +29,11 @@ public class test
 		t2.right = t5;
 		t3.right = t6;
 
-		ArrayList<Integer> res = new ArrayList<Integer> ();
-		res = TreeAll.inorderTraversal(t1);
+		int k = TreeAll.getNodeNumKthLevel(t1,2);
+		System.out.println(k);
+		// ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>> ();
+		// res = TreeAll.levelOrder(t1);
+		// System.out.println(res);
 		// int res1 = TreeAll.getNodeNumRec(t1);
 		// int res2 = TreeAll.getNodeNum(t1);
 		// int res1 = TreeAll.getDepthRec(t1);

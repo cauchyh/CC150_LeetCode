@@ -38,8 +38,27 @@ public class test
 		t2.right = t5;
 		t3.right = t6;
 
-		ArrayList<ArrayList<Integer>> res = LevelTraversal2.levelOrderBottom(t1);
-		System.out.println(res);
+
+		int[] A = {1,2,1,0,2,1,1,1,2,0,0,0,1,1,1,1,0,2,0,0,1,0,2,0,0,1,2,1,0};
+		SortColor.sortColors(A);
+
+		// int res = RemoveDupArray.removeDuplicates(A);
+		// System.out.println(res);
+		for (int i=0; i<A.length; i++)
+		{
+			System.out.print(A[i]);
+		}
+		System.out.println();
+		// int[] res = new int[A.length];
+		// System.out.println();
+		// String s1 = "cbd f d ";
+		// System.out.println(s1.substring());
+		// System.out.println("1123");
+		// String s2 = ReverseWords.reverseWords(s1);
+		// System.out.println(s2);
+
+		// ArrayList<ArrayList<Integer>> res = LevelTraversal2.levelOrderBottom(t1);
+		// System.out.println(res);
 		// System.out.println();
 		
 		// int[] t1 = new int[20]; 

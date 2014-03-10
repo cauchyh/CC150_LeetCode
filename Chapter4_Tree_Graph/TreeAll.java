@@ -18,6 +18,11 @@
         Use both recursion and non-recursion solution, where the recursion solution is easy
     7. Get the number of leaf node
         This seems easy to operate. Queue will be necessary to solve this problem.
+    8. Decide whether two binary trees are indentical
+    9. The mirror of a binary tree
+        One solution is to operate on the original tree while the other will return a 
+        new tree.
+
 
 */
 import java.util.*;
@@ -370,9 +375,64 @@ public class TreeAll
         {
             return 0;
         }
-        
+
+        if (root.left == null && root.right == null)
+        {
+            return 1;
+        }
+
+        return getNodeNumLeafRec(root.left) + getNodeNumLeafRec(root.right);
     }
-}
+
+    // Problem 8
+    // Whether two binary trees are identical
+    public static boolean isSameRec(TreeNode r1, TreeNode r2)
+    {
+        if (r1 == null && r2 == null)
+        {
+            return true;
+        }
+
+        if (r1 == null || r2 == null)
+        {
+            return false;
+        }
+
+        if (r1.val != r2.val)
+        {
+            return false;
+        }
+
+        return (isSame(r1.left, r2.left) && isSame(r1.right, r2.right));
+    }
+
+    // public static boolean isSame(TreeNode r1, TreeNode r2)
+    // {
+    //     if (r1 == null && r2 == null)
+    //     {
+    //         return true;
+    //     }
+
+    //     if (r1 == null || r2 == null)
+    //     {
+    //         return false;
+    //     }
+
+    //     Queue <Integer> queue1 = new LinkedList<Integer> ();
+    //     Queue <Integer> queue2 = new LinkedList<Integer> ();
+
+    //     TreeNode c1;
+    //     TreeNode c2;
+
+    //     queue1.add(r1);
+    //     queue2.add(r2);
+
+
+    // }
+
+    // Problem 9
+    // 
+}   
 
 
 

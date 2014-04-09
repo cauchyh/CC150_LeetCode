@@ -1,0 +1,10 @@
+Explain what the following code does:
+((n & (n-1)) == 0)
+
+if	n = abcde1000
+  n-1 = abcde0111
+
+  where abcde must be 0s
+Therefore, n must look like: 000...1000...000
+thus, this code is mainly used to check whether n is a power of 2.
+on other words, it is used to check whether n == 2^k;

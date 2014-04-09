@@ -11,75 +11,39 @@ public class ReverseWords
 {
 	public static String reverseWords(String s) 
     {
-    	if (s.length() == 0)
-        {
-            return "";
-        }
+        Stack<String> stack = new Stack<String> ();
         String res = "";
-        Stack<String> stack = new Stack<String>();
-        int start = 0;
-        int end = 0;
-        while(s.charAt(start) == ' ')
+        int wordStart = 0;
+        int wordEnd = 0;
+        boolean trackStart = true;
+        for (int i=0; i<s.length(); i++)
         {
-        	if (start == s.length()-1)
-        	{
-        		return "";
-        	}
-        	start++; // find the start position to exclude space
-
+            if (s.charAt(i) != ' ' && trackStart == true)
+            {
+                wordStart = i;
+                wordEnd = i+1;
+                trackStart = false;
+            }
+            if (s.charAt(i) == ' ' && trackStart == false)
+            {
+                wordEnd = i;
+                stack.push(s.substring(wordStart,wordEnd));
+                wordStart = i+1;
+                trackStart = true;
+            }
         }
-        // end = start;
-
-        while (true)
+        if (trackStart == false && s.charAt(s.length()-1) != ' ')
         {
-        	while (s.charAt(start) == ' ')
-        	{
-        		start++;
-        		if (start >= s.length()-1)
-        		{
-        			break;
-        		}
-        	}
-        	// if (start == s.length() - 1)
-        	// {
-        	// 	break;
-        	// }
-        	end = start;
-        	// System.out.println(end);
-        	while(s.charAt(end) != ' ')
-        	{
-        		// System.out.println("inside loop");
-        		
-        		if (end >= s.length()-1)
-        		{
-        			break;
-        		}
-        		end++;
-        	}
-        	// System.out.println(start);
-        	// System.out.println(end);
-        	stack.push(s.substring(start,end));
-        	if (end == s.length()-1)
-        	{
-        		break;
-        	}
-        	start = end;
-
+            wordEnd = s.length();
+            stack.push(s.substring(wordStart,wordEnd));
         }
-        System.out.println(stack);
-
-        // display method
-        int stackSize = stack.size();
-        for (int i=0; i<stackSize; i++)
+        while (!stack.isEmpty())
         {
-        	if (i == stackSize - 1)
-        	{
-        		res = res + stack.pop();
-        	}
-        	else
-        	{
-        		res = res + stack.pop() + " ";
-        	}
+            res = res + stack.pop();
+            if (!stack.empty())
+            {
+                res = res + " ";
+            }
         }
         return res;
     }

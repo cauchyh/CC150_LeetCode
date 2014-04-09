@@ -19,9 +19,10 @@
     7. Get the number of leaf node
         This seems easy to operate. Queue will be necessary to solve this problem.
     8. Decide whether two binary trees are indentical
-    9. The mirror of a binary tree
-        One solution is to operate on the original tree while the other will return a 
-        new tree.
+    9. Judge whether two tree is mirrored
+        Use both recursion solution and non-recursion solution
+    10. Get the last common parent of two nodes in a tree
+
 
 
 */
@@ -271,10 +272,46 @@ public class TreeAll
 
     // Problem 5
     // Convert a Binery search tree(BST) into double linked list(DLL)
-    // public static TreeNode convertBST2DLLrec(TreeNode root)
-    // {
+    public static TreeNode convertBST2DLL(TreeNode root)
+    {
+        if (root == null)
+        {
+            return null;
+        }
 
-    // }
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode cur = root;
+        TreeNode pre = null;
+        TreeNode res = null;
+        // stack.push(root);
+        while(true)
+        {
+            while(cur != null)
+            {
+                stack.push(cur);
+                cur = cur.left;
+            }
+
+            if (stack.isEmpty())
+            {
+                break;
+            }
+
+            cur = stack.pop();
+            if (pre != null)
+            {
+                pre.right = cur;
+            }
+            // cur.left = pre;
+            if (head == null)
+            {
+                head = cur;
+            }
+            pre = cur;
+            cur = cur.right;
+        }
+        return head;
+    }
 
     // Problem 6
     // Get the node number of the kth level
@@ -431,7 +468,41 @@ public class TreeAll
     // }
 
     // Problem 9
-    // 
+    // Judge whether two tree is mirrored
+    // Recursion Solution
+
+    public static isSameRec(TreeNode r1, TreeNode r2)
+    {
+        if (r1 == null && r2 == null)
+        {
+            return true;
+        }
+
+        if (r1 == null || r2 == null)
+        {
+            return false;
+        }
+
+        if (r1.val != r2.val)
+        {
+            return false;
+        }
+
+        return isSameRec(r1.left, r2.right)&&isSameRec(r1.right, r2.left);
+    }
+
+    // public static isSame(TreeNode r1, TreeNode r2)
+    // {
+        
+    // }
+
+
+    // Problem 10
+    // Get the last common parent of two tree node
+    public static TreeNode getLastCommonParent(TreeNode root, TreeNode r1, TreeNode r2)
+    {
+        
+    }
 }   
 
 

@@ -2,19 +2,20 @@ import java.util.*;
 
 class TreeNode 
 {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) 
-   	{
+	int val;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int x) 
+	{
 	  val = x; 
-   	}
+	}
 }
 
 public class test
 {
 	public static void main(String[] args)
 	{
+		
 		// constructure a tree first to test the tree test
 		TreeNode t1 = new TreeNode(1);
 		TreeNode t2 = new TreeNode(2);
@@ -29,8 +30,14 @@ public class test
 		t2.right = t5;
 		t3.right = t6;
 
-		int k = TreeAll.getNodeNumKthLevel(t1,2);
-		System.out.println(k);
+		TreeNode res = Problem7.firstCommonAncestor(t1, t3, t6);
+		System.out.println(res.val);
+		// ArrayList<LinkedList<TreeNode>> res = Problem4.createLevelLList(t1);
+		// boolean res = Problem5.isBST(t1);
+		// System.out.println(res);
+
+		// int k = TreeAll.getNodeNumKthLevel(t1,2);
+		// System.out.println(k);
 		// ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>> ();
 		// res = TreeAll.levelOrder(t1);
 		// System.out.println(res);

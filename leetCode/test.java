@@ -2,53 +2,152 @@ import java.util.*;
 
 class ListNode 
 {
-      int val;
-      ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-      }
- }
+    int val;
+	ListNode next;
+	ListNode(int x) 
+	{
+		val = x;
+		next = null;
+	}
+
+	public void display()
+	{
+		ListNode cur = this;
+		while(cur != null)
+		{
+			System.out.print(cur.val + " ");
+			cur = cur.next;
+		}
+		System.out.println();
+	}
+}
 
 class TreeNode 
 {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) 
-   	{
-	  val = x; 
-   	}
-  }
+	int val;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int x) 
+	{
+  		val = x; 
+	}
+}
 
 public class test
 {
 	public static void main(String[] args)
 	{
-		TreeNode t1 = new TreeNode(1);
-		TreeNode t2 = new TreeNode(2);
-		TreeNode t3 = new TreeNode(3);
-		TreeNode t4 = new TreeNode(4);
-		TreeNode t5 = new TreeNode(5);
-		TreeNode t6 = new TreeNode(6);
-
-		t1.left = t2;
-		t1.right = t3;
-		t2.left = t4;
-		t2.right = t5;
-		t3.right = t6;
-
-
-		int[] A = {1,2,1,0,2,1,1,1,2,0,0,0,1,1,1,1,0,2,0,0,1,0,2,0,0,1,2,1,0};
-		SortColor.sortColors(A);
-
-		// int res = RemoveDupArray.removeDuplicates(A);
+		int[] a1 = new int[]{1,2,3};
+		ArrayList<ArrayList<Integer>> res = Permutations.permute(a1);
+		System.out.println(res);
+		// ArrayList<Integer> res = new ArrayList<Integer>();
+		// for (int i:a1)
+		// {
+		// 	res.add(i);
+		// }
 		// System.out.println(res);
-		for (int i=0; i<A.length; i++)
-		{
-			System.out.print(A[i]);
-		}
-		System.out.println();
+		// System.out.println(a1[3]);
+		// ArrayList<Integer> res = new ArrayList<Integer>(Arrays.asList(a1));
+		// Collections.addAll(res,a1);
+		// res.add(4);
+		// System.out.println(res);
+		// ArrayList<Integer> r1 = new ArrayList<Integer> ();
+		// r1.add(1);
+		// r1.add(2);
+		// ArrayList<Integer> r2 = new ArrayList<Integer> (r1);	
+		// r2.add(3);
+		// System.out.println(r1);
+		// System.out.println(r2);
+
+		// ArrayList<String> res = Anagrams.getAnagrams("cat");
+		// System.out.println(res);
+		// char[] input = {'a','b','c'};
+		// Anagrams.rotate(input,2);
+		// System.out.println(input);
+		// System.out.println(res);
+		// String[] test1 = new String[]{"4", "13", "5", "/", "+"};
+		// int res = ReversePolish.evalRPN(test1);
+		// System.out.println(res);
+		// String a = "/..//./";
+		// String res = SimplifyPath.simplifyPath(a);
+		// System.out.println(res);
+		// TreeNode t1 = new TreeNode(1);
+		// TreeNode t2 = new TreeNode(2);
+		// TreeNode t3 = new TreeNode(3);
+		// TreeNode t4 = new TreeNode(4);
+		// TreeNode t5 = new TreeNode(5);
+		// TreeNode t6 = new TreeNode(6);
+
+		// t1.left = t2;
+		// t1.right = t3;
+		// t2.left = t4;
+		// t2.right = t5;
+		// t3.right = t6;
+		// ArrayList<ArrayList<Integer>> res = BTreeZigTraversal.zigzagLevelOrder(t1);
+		// ArrayList<Integer> res = PascalTriangleII.getRow(4);
+		// System.out.println(res);
+		// char c = 'a';
+		// System.out.println((char) (c+1));
+		// String a = "0";
+		// String b = "10";
+		// String res = AddBinary.addBinary(a,b);
+		// System.out.println(res);
+		// boolean res = ValidParentheses.isValid(a);
+		// System.out.println(res);
+
+		// ListNode l1 = new ListNode(1);
+		// ListNode l2 = new ListNode(2);
+		// ListNode l3 = new ListNode(3);
+		// ListNode l4 = new ListNode(4);
+		// ListNode l5 = new ListNode(5);
+
+		// l1.next = l2;
+		// l2.next = l3;
+		// l3.next = l4;
+		// l4.next = l5;
+
+		// ReorderList.reorderList(l1);
+		// ListNode cur = l1;
+		// while (cur != null)
+		// // for (int i=0; i<10; i++)
+		// {
+		// 	System.out.print(cur.val);
+		// 	cur = cur.next;
+		// }
+		// System.out.println();
+
+
+		// ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>(5);
+
+		// ArrayList<ArrayList<Integer>> res = Pascal.generate(15);
+		// System.out.println(res);
+		// int res = Pascal.kCn(25,2);
+		// System.out.println(res);
+		// System.out.println(res);
+		
+
+		// ListNode res = ReverseLList.reverseBetween(l1,5,5);
+		// res.display();
+
+		// String test = "   dog";
+		// int res = LengthOfLastWord.lengthOfLastWord(test);
+		// System.out.println(res);
+		
+
+		// int [] A = {1,1,1,1,3,3};
+		// int res = RemoveDupArray2.removeDuplicates(A);
+		// System.out.println(res);
+
+		// // int[] A = {1,2,1,0,2,1,1,1,2,0,0,0,1,1,1,1,0,2,0,0,1,0,2,0,0,1,2,1,0};
+		// // SortColor.sortColors(A);
+
+		// // // int res = RemoveDupArray.removeDuplicates(A);
+		// // // System.out.println(res);
+		// for (int i=0; i<res; i++)
+		// {
+		// 	System.out.print(A[i]);
+		// }
+		// System.out.println();
 		// int[] res = new int[A.length];
 		// System.out.println();
 		// String s1 = "cbd f d ";
@@ -79,16 +178,16 @@ public class test
 		// int[] res = TwoSum.twoSum(t1, target);
 		// System.out.println("{" + res[0] + ", " + res[1] +"}");
 
-		// ListNode l1 = new ListNode(1);
-		// ListNode l2 = new ListNode(3);
-		// ListNode l3 = new ListNode(5);
-		// ListNode l4 = new ListNode(7);
-		// ListNode l5 = new ListNode(9);
+		
 
-		// l1.next = l2;
-		// l2.next = l3;
-		// l3.next = l4;
-		// l4.next = l5;
+		// ListNode res = RemoveDupLL.deleteDuplicates(l1);
+		// // System.out.println(res);
+		// while (res != null)
+		// {
+		// 	System.out.print(res.val);
+		// 	res = res.next;
+		// }
+		// System.out.println();
 
 		// ListNode l6 = new ListNode(2);
 		// ListNode l7 = new ListNode(4);

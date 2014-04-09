@@ -1,27 +1,18 @@
-/*Given a sorted linked list, delete all nodes that have duplicate numbers, 
-leaving only distinct numbers from the original list.
+/*
+	Given a sorted linked list, delete all nodes that have duplicate numbers, 
+	leaving only distinct numbers from the original list.
 
-For example,
-Given 1->2->3->3->4->4->5, return 1->2->5.
-Given 1->1->1->2->3, return 2->3.*/
+	For example,
+	Given 1->2->3->3->4->4->5, return 1->2->5.
+	Given 1->1->1->2->3, return 2->3.
+*/
 
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class RemoveDuplicate2
+public class RemoveDupLL
 {
-	public ListNode deleteDuplicates(ListNode head) 
-	{
-		if (head == null)
+	public static ListNode deleteDuplicates(ListNode head) 
+    {
+        if (head == null)
         {
             return null;
         }
@@ -35,8 +26,7 @@ public class RemoveDuplicate2
         head = pre;
         ListNode cur = head.next;
         ListNode tracer = head;
-        tracer.next = null; // this is a very important step 
-                            // to make sure the orginal next is empty thus further operations can be done
+        tracer.next = null;
         int curData = cur.val + 1; // make sure they are different numbers
         while (cur != null)
         {
@@ -59,6 +49,5 @@ public class RemoveDuplicate2
             }
         }
         return head.next;
-
-	}
+    }
 }

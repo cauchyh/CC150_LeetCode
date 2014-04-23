@@ -37,9 +37,58 @@ public class test
 {
 	public static void main(String[] args)
 	{
-		int[] a1 = new int[]{1,2,3};
-		ArrayList<ArrayList<Integer>> res = Permutations.permute(a1);
-		System.out.println(res);
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter two numbers: ");
+		int number1 = input.nextInt();
+		int number2 = input.nextInt();
+		System.out.println(number1/number2);
+		// int[] array = {1,2,3};
+		// ArrayList<ArrayList<Integer>> res = Subset.subsets(array);
+		// System.out.println(res);		
+
+		// String input = "MCMXCVI";
+		// int res = RomanToInteger.romanToInt(input);
+		// System.out.println(res);
+		// int res = UniqueBTree.numTrees(5);
+		// System.out.println("result: " + res);
+		// int[] test = new int[1];
+		// System.out.println(test[0]);
+		// ArrayList<ArrayList<Integer>> in = new ArrayList<ArrayList<Integer>>();
+		// ArrayList<Integer> a1 = new ArrayList<Integer>();
+		// ArrayList<Integer> a2 = new ArrayList<Integer>();
+		// ArrayList<Integer> a3 = new ArrayList<Integer>();
+		// a1.add(-1);
+		// a2.add(2);
+		// a2.add(3);
+		// a3.add(1);
+		// a3.add(-1);
+		// a3.add(-3);
+		// in.add(a1);
+		// in.add(a2);
+		// in.add(a3);
+		// int res = Triangle.minimumTotal(in);
+		// System.out.println(res);
+
+		// int[] r1 = new int[]{4,15,5,6,6,1};
+		// Arrays.sort(r1);
+		// for (int i=0; i<r1.length; i++)
+		// {
+		// 	System.out.print(r1[i] + " ");
+		// }
+		// System.out.println(r1);
+		// int[][] test = new int[1][1];
+
+		// int res = UniquePath.uniquePaths(3,3);
+		// System.out.println(res);
+		// int[][] mn = new int[3][3];
+		// System.out.println(mn[1][1]);
+		// int[] m = new int[3];
+		// System.out.println(m[0]+" "+m[1]);
+		// ArrayList<Integer> res = GrayCode.grayCode(5);
+		// System.out.println(res);
+		// int[] a1 = new int[]{1,2,3};
+		// ArrayList<ArrayList<Integer>> res = Permutations.permute(a1);
+		// System.out.println(res);
 		// ArrayList<Integer> res = new ArrayList<Integer>();
 		// for (int i:a1)
 		// {

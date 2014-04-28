@@ -33,15 +33,29 @@ class TreeNode
 	}
 }
 
+interface Edible
+{
+	public abstract String howToEat();
+}
+
+
+
 public class test
 {
 	public static void main(String[] args)
 	{
-		Scanner input = new Scanner(System.in);
-		System.out.print("Enter two numbers: ");
-		int number1 = input.nextInt();
-		int number2 = input.nextInt();
-		System.out.println(number1/number2);
+		ArrayList<String> res = GenerateParentheses.generateParenthesis(3);
+		System.out.println(res);
+		// String res = CountAndSay.countAndSay(6);
+		// System.out.println(res);
+		// Integer n1 = new Integer(1);
+		// Integer n2 = new Integer(2);
+		// System.out.println(n1.compareTo(n2));
+		// Scanner input = new Scanner(System.in);
+		// System.out.print("Enter two numbers: ");
+		// int number1 = input.nextInt();
+		// int number2 = input.nextInt();
+		// System.out.println(number1/number2);
 		// int[] array = {1,2,3};
 		// ArrayList<ArrayList<Integer>> res = Subset.subsets(array);
 		// System.out.println(res);		

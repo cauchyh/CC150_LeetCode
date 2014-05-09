@@ -44,8 +44,24 @@ public class test
 {
 	public static void main(String[] args)
 	{
-		ArrayList<String> res = GenerateParentheses.generateParenthesis(3);
+		String test1 = "hnwnkuewhsqmgbbuqcljjivswmdkqtbxixmvtrrbljptnsnfwzqfjmafadrrwsofsbcnuvqhffbsaqxwpqcac";
+		int res = LongestNoRepeatSubstring.lengthOfLongestSubstring(test1);
 		System.out.println(res);
+		// int[][] t1 = new int[2][2];
+		// System.out.println(t1[0][0]);
+		// int[] tese = {0,1,2,3,4,5,6,7};
+		// int[] res = Arrays.copyOfRange(tese, 1, 2);
+		// System.out.println(res[1]);
+		// System.out.println(res);
+		// Random random = new Random();
+		// while (true)
+		// {
+		// 	int res = random.nextInt(5);
+		// 	System.out.println(res);
+
+		// }
+		// ArrayList<String> res = GenerateParentheses.generateParenthesis(3);
+		// System.out.println(res);
 		// String res = CountAndSay.countAndSay(6);
 		// System.out.println(res);
 		// Integer n1 = new Integer(1);

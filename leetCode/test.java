@@ -38,15 +38,65 @@ interface Edible
 	public abstract String howToEat();
 }
 
-
+class RandomListNode {
+    int label;
+    RandomListNode next, random;
+    RandomListNode(int x) { this.label = x; }
+};
 
 public class test
 {
 	public static void main(String[] args)
 	{
-		String test1 = "hnwnkuewhsqmgbbuqcljjivswmdkqtbxixmvtrrbljptnsnfwzqfjmafadrrwsofsbcnuvqhffbsaqxwpqcac";
-		int res = LongestNoRepeatSubstring.lengthOfLongestSubstring(test1);
-		System.out.println(res);
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+		temp.add(-1);
+		ArrayList<ArrayList<Integer>> input = new ArrayList<ArrayList<Integer>>();
+		input.add(temp);
+		temp = new ArrayList<Integer>();
+		temp.add(2);
+		temp.add(3);
+		input.add(temp);
+		temp = new ArrayList<Integer>();
+		temp.add(1);
+		temp.add(-1);
+		temp.add(3);
+		input.add(temp);
+		int res = Triangle2.minimumTotal(input);
+		System.out.println("res is: " + res);
+		// ArrayList<ArrayList<Integer>> res = PascalII.generate(3);
+		// System.out.println(res);
+		// RandomListNode r1 = new RandomListNode(1);
+		// RandomListNode r2 = new RandomListNode(2);
+		// RandomListNode r3 = new RandomListNode(3);
+		// RandomListNode r4 = new RandomListNode(4);
+		// r1.next = r2;
+		// r2.next = r3;
+		// r3.next = r4;
+		// RandomListNode res = CopyListWithRanPointer.copyRandomList(r1);
+		// RandomListNode cur = res;
+		// while (cur != null) {
+		// 	System.out.println(cur.label);
+		// 	cur = cur.next;
+		// }
+		// String[] in = new String[] {"1","1","1"};
+		// ArrayList<String> res = Anagrams.anagrams(in);
+		// System.out.println(res);
+		// String res = AddBinary2.addBinary("1010", "1011");
+		// System.out.println(res);
+		// TreeNode r1 = new TreeNode(1);
+		// TreeNode r2 = new TreeNode(-2);
+		// TreeNode r3 = new TreeNode(3);
+		// r1.left = r2;
+		// r1.right = r3;
+		// ArrayList<ArrayList<Integer>> res = PathSumII.pathSum(r1, -1);
+		// System.out.println(r1);
+		// char[][] input = new char[9][9] {"..5.....6","....14...",".........",".....92..","5....2...",".......3.","...54....","3.....42.","...27.6.."};
+		// boolean res = ValidSudoku.isValidSudoku(input);
+		// System.out.println(res);
+
+		// String test1 = "hnwnkuewhsqmgbbuqcljjivswmdkqtbxixmvtrrbljptnsnfwzqfjmafadrrwsofsbcnuvqhffbsaqxwpqcac";
+		// int res = LongestNoRepeatSubstring.lengthOfLongestSubstring(test1);
+		// System.out.println(res);
 		// int[][] t1 = new int[2][2];
 		// System.out.println(t1[0][0]);
 		// int[] tese = {0,1,2,3,4,5,6,7};

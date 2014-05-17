@@ -8,43 +8,49 @@ import java.util.*;
 
 public class Anagrams
 {
-	public static ArrayList<String> getAnagrams(String str)
-	{
-		// put all the possible combinations into an arraylist.
-		ArrayList<String> res = new ArrayList<String>();
-		char[] arrChar = str.toCharArray();
-		int newSize = arrChar.length;
-		doAnagrams(newSize, res, arrChar);
-		return res;
-	}
-
-	private static void doAnagrams(int newSize, ArrayList<String> res, char[] arrChar)
-	{
-		if (newSize == 1)
-		{
-			return;
-		}
-		for (int i=0; i<newSize; i++)
-		{
-			doAnagrams(newSize - 1, res, arrChar);
-			if (newSize == 2)
-			{
-				res.add(new String(arrChar));
-			}
-			rotate(arrChar, newSize);
-		}
-	}
-
-	public static void rotate(char[] arrChar, int newSize)
-	{
-		int arrLength = arrChar.length;
-		int position = arrLength - newSize;
-		char temp = arrChar[position];
-		for (int i=position; i<arrLength-1; i++)
-		{
-			arrChar[i] = arrChar[i+1];
-		}
-		arrChar[arrLength-1] = temp;
-		// System.out.println(arrChar);
-	}
+	public static ArrayList<String> anagrams(String[] strs) 
+    {
+        if (strs.length == 0) {
+            return new ArrayList<String>();
+        }
+        ArrayList<String> res = new ArrayList<String> ();
+        HashMap <String, String> hashMap = new HashMap<String, String> (); 
+        Set<String> set = new HashSet<String> ();
+        String sortedString;
+        for (int i=0; i<strs.length; i++) {
+            sortedString = getSortedString(strs[i]);
+            if (set.contains(sortedString)){
+                res.add(strs[i]);
+            } else {
+                set.add(sortedString);
+                hashMap.put(sortedString, strs[i]);
+            }
+        }
+        int length = res.size();
+        String temp;
+        for (int i=0; i<length; i++) {
+            temp = getSortedString(res.get(i));
+            if (hashMap.containsKey(temp)){
+                res.add(hashMap.get(temp));
+                hashMap.remove(temp);
+            }
+        }
+        // System.out.println(res);
+        // ArrayList<String> resClone = (ArrayList<String>)res.clone();
+        // for (String temp:resClone) {
+        //     String temp0 = getSortedString(temp);
+        //     if (hashMap.containsKey(temp0)) {
+	       //      res.add(hashMap.get(temp0));
+	       //  }
+        //     hashMap.remove(temp0);
+        // }
+        return res;
+        
+    }
+    
+    private static String getSortedString(String str) {
+        char[] temp = str.toCharArray();
+        Arrays.sort(temp);
+        return new String(temp);
+    }
 }

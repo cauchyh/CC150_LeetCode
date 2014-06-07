@@ -48,44 +48,21 @@ public class test
 {
 	public static void main(String[] args)
 	{
-		TreeNode t1 = new TreeNode(1);
-		TreeNode t2 = new TreeNode(2);
-		TreeNode t3 = new TreeNode(3);
-		t1.left = t2;
-		t1.right = t3;
-		ZigzagTraversal.zigzagLevelOrder(t1);
-		// System.out.println(t1);
-		// String res = AddBinary3.addBinary("0","1");
-		// System.out.println(res);
-		// ListNode l1 = new ListNode(1);
-		// ListNode l2 = new ListNode(2);
-		// ListNode l3 = new ListNode(3);
-		// // ListNode l4 = new ListNode(4);
-		// l1.next = l2;
-		// l2.next = l3;
-		// // l3.next = l4; 
-		// ReorderList2.reorderList(l1);
-		// l1.display();
-		// l1.display();
-		// l1 = ReverseLinkedList.reverseLinkedList(l1);
-		// l1.display();
-		// int[] test = {1,1,-1,-1,3};
-		// int target = -1;
-		// int res = ThreeSumClosest.threeSumClosest(test, target);
-		// System.out.println(res);
-		// int[] test = {-13,11,11,0,-5,-14,12,-11,-11,-14,-3,0,-3,12,-1,-9,-5,-13,9,-7,-2,9,-1,4,-6,-13,-7,10,10,9,7,13,5,4,-2,7,5,-13,11,10,-12,-14,-5,-8,13,2,-2,-14,4,-8,-6,-13,9,8,6,10,2,6,5,-10,0,-11,-12,12,8,-7,-4,-9,-13,-7,8,12,-14,10,-10,14,-3,3,-15,-14,3,-14,10,-11,1,1,14,-11,14,4,-6,-1,0,-11,-12,-14,-11,0,14,-9,0,7,-12,1,-6};
-		// ArrayList<ArrayList<Integer>> res = ThreeSum.threeSum(test);
-		// System.out.println(res);
-		// HashSet<ArrayList<Integer>> set = new HashSet<ArrayList<Integer>>();
-		// ArrayList<Integer> temp = new ArrayList<Integer>();
-		// temp.add(1);
-		// temp.add(2);
-		// ArrayList<Integer> temp2 = new ArrayList<Integer>();
-		// temp2.add(1);
-		// temp2.add(0);
-		// set.add(temp);
-		// set.add(temp2);
-		// System.out.println(set);
+		HashSet<ArrayList<Integer>> set = new HashSet<ArrayList<Inteer>>();
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+		temp.add(1);
+		temp.add(2);
+		ArrayList<Integer> temp2 = new ArrayList<Integer>();
+		temp2.add(1);
+		temp2.add(2);
+		set.add(temp);
+		set.add(temp2);
+		System.out.println(set);
+		// int[] num = {1,2,3,4,5,6,7,8};
+		// for (int i=1; i<=num.length; i++) {
+		// 	int res = BinarySearch.binarySearch(num, i);
+		// 	System.out.println(res);
+		// }
 		// ListNode l1 = new ListNode(1);
 		// ListNode l2 = new ListNode(2);
 		// ListNode l3 = new ListNode(3);
